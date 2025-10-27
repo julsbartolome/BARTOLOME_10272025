@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <a routerLink="/" class="nav-brand">
+    <i class="fas fa-play-circle"></i>
+    <span>JulsTube</span>
+  </a>
+  <div class="nav-links">
+    
+
+    <a routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+    <i class="fas fa-home"></i>
+    Home
+    </a>
+    
+
+    <a routerLink="/upload"
+      routerLinkActive="active">
+      <i class="fas fa-upload"></i>
+    Upload
+    </a>
+    
+
+  </div>
+
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
