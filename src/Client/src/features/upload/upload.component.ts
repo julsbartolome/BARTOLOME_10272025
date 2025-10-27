@@ -24,33 +24,33 @@ import { Category } from '../../models/category';
   standalone: true
 })
 export class UploadComponent implements OnInit {
-uploadForm = signal<FormGroup>(new FormGroup({}));
-categories = signal<Category[]>([]);
-selectedFile = signal<File | null>(null);
-isUploading = signal<boolean>(false);
+  uploadForm = signal<FormGroup>(new FormGroup({}));
+  categories = signal<Category[]>([]);
+  selectedFile = signal<File | null>(null);
+  isUploading = signal<boolean>(false);
 
-//computed signals
-isFormValid = computed(() => this.uploadForm().valid && this.selectedFile() !== null && !this.isUploading());
+  //computed signals
+  isFormValid = computed(() => this.uploadForm().valid && this.selectedFile() !== null && !this.isUploading());
 
-/**
- *
- */
-constructor(private fb:FormBuilder) {
-  this.uploadForm.set(this.fb.group({
-    title:['',Validators.required],
-    description:[''],
-    categories: [[]]
-  }));
-  
-}
-ngOnInit(): void {
-  throw new Error('Method not implemented.');
-}
-onSubmit() {
-  throw new Error('Method not implemented.');
-}
+  /**
+   *
+   */
+  constructor(private fb:FormBuilder) {
+    this.uploadForm.set(this.fb.group({
+      title:['',Validators.required],
+      description:[''],
+      categories: [[]]
+    }));
+    
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+  onSubmit() {
+    throw new Error('Method not implemented.');
+  }
 
-onFileSelected($event: Event) {
-throw new Error('Method not implemented.');
-}
+  onFileSelected($event: Event) {
+    throw new Error('Method not implemented.');
+  }
 }
